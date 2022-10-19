@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Delivery Address</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of orderData">
+                    
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.contactNo}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.deliveryAddress}}</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
