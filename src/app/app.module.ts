@@ -5,16 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddordersComponent } from './addorders/addorders.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+const appRoutes:Routes=[
+  {
+    path:"",component:AddordersComponent
+  },
+  {
+    path:"view",component:ViewOrderComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddordersComponent
+    AddordersComponent,
+    ViewOrderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
